@@ -32,3 +32,8 @@ jobs:
       - name: run tests with pytest python version ${{ matrix.python-version }}
         run: |
           pytest tests
+      - name: Generate Coverage Report
+      run: |
+        coverage run -m --source=actions pytest tests
+    - name: Upload Coverage to Codecov
+      uses: codecov/codecov-action@v1
