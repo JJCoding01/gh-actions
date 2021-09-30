@@ -1,5 +1,5 @@
 import pytest
-from actions.actions import add
+from actions.actions import add, sub
 
 
 @pytest.mark.parametrize(
@@ -11,3 +11,14 @@ from actions.actions import add
 )
 def test_add(nums, ans):
     assert add(*nums) == ans
+
+
+@pytest.mark.parametrize(
+    "nums, ans",
+    (
+        ((2, 1), 1),
+        ((5, 3), 2),
+    ),
+)
+def test_sub(nums, ans):
+    assert sub(*nums) == ans
