@@ -1,4 +1,4 @@
-name: basic push
+name: lint & test
 on: [push]
 jobs:
   run-tests:
