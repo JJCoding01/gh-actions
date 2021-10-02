@@ -5,8 +5,9 @@ name: PR Code Coverage
 
 on:
   workflow_run:
-    workflows:
-      - "lint & test"
+    workflows: ["lint & test"]
+    types:
+      - completed
   push:
     branches: [ master ]
   pull_request:
@@ -14,6 +15,7 @@ on:
 
 jobs:
   build:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
