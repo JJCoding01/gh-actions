@@ -5,7 +5,7 @@ name: PR Code Coverage
 
 on:
   workflow_run:
-    workflows: ["lint & test"]
+    workflows: ["lint-and-test"]
     types:
       - completed
   push:
