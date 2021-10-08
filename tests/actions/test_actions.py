@@ -22,3 +22,8 @@ def test_add(nums, ans):
 )
 def test_sub(nums, ans):
     assert sub(*nums) == ans
+
+
+@pytest.mark.parametrize('a, b, ans', (2, 2, 4), (3, 2, 9), (2, 3, 8))
+def test_pow(a, b, ans):
+    pytest.fail(msg='not implemented')
