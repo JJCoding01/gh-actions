@@ -13,3 +13,8 @@ def sub(*args):
 def power(a, b):
     """return a to the power of b"""
     return a ** b
+
+
+def div(a, b):
+    """returns a / b"""
+    return a / b
