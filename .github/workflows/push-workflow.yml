@@ -33,6 +33,7 @@ jobs:
         run: |
           pytest tests
   code-coverage:
+    needs: run-tests
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
