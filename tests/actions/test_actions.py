@@ -1,5 +1,5 @@
 import pytest
-from actions.actions import add, sub
+from actions.actions import add, sub, power
 
 
 @pytest.mark.parametrize(
@@ -24,6 +24,6 @@ def test_sub(nums, ans):
     assert sub(*nums) == ans
 
 
-@pytest.mark.parametrize('a, b, ans', (2, 2, 4), (3, 2, 9), (2, 3, 8))
-def test_pow(a, b, ans):
-    pytest.fail(msg='not implemented')
+@pytest.mark.parametrize('a, b, ans', [(2, 2, 4), (3, 2, 9), (2, 3, 8)])
+def test_power(a, b, ans):
+    assert power(a, b) == ans
