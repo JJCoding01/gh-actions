@@ -24,6 +24,6 @@ def test_sub(nums, ans):
     assert sub(*nums) == ans
 
 
-@pytest.mark.parametrize('a, b, ans', [(2, 2, 4), (3, 2, 9), (2, 3, 8)])
+@pytest.mark.parametrize("a, b, ans", [(2, 2, 4), (3, 2, 9), (2, 3, 8)])
 def test_power(a, b, ans):
     assert power(a, b) == ans
