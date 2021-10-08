@@ -17,7 +17,6 @@ jobs:
       - name: install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install coverage
           pip install -r requirements.txt
       - name: show versions
         run: |
@@ -33,7 +32,20 @@ jobs:
       - name: run tests with pytest (python version ${{ matrix.python-version }})
         run: |
           pytest tests
-      - name: Generate Coverage Report
-        run: |
+  code-coverage:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install coverage
+        pip install -r requirements.txt
+    - name: Generate Coverage Report
+      run: |
           coverage run -m --source=actions pytest tests
           coverage report --fail-under=100
