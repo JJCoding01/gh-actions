@@ -36,4 +36,4 @@ jobs:
       - name: Generate Coverage Report
         run: |
           coverage run -m --source=actions pytest tests
-          coverage report
+          coverage report --fail-under=100
