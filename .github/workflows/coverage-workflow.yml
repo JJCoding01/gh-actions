@@ -1,5 +1,5 @@
 name: code-cov
-on:
+on: [push, pull_request]
   workflow_run:
     workflows: ["tests"]
     types:
