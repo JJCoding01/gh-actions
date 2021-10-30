@@ -78,5 +78,5 @@ jobs:
     - name: Generate Coverage Report
       run: |
           git branch -vv
-          coverage run -m --source=actions pytest tests
+          coverage run -m --source=actions pytest tests -v
           coverage report --fail-under=100
