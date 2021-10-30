@@ -18,3 +18,8 @@ def power(a, b):
 def div(a, b):
     """returns a / b"""
     return a / b
+
+
+def mul(a, b):
+    """return a * b"""
+    return a * b
