@@ -1,6 +1,5 @@
 name: code-cov
-on:
-  push:
+on: [push]
   workflow_run:
     workflows: ["tests"]
     types:
