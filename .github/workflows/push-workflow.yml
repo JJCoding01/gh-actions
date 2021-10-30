@@ -77,5 +77,6 @@ jobs:
         pip install -r requirements.txt
     - name: Generate Coverage Report
       run: |
-          coverage run -m --source=actions pytest tests
+          git branch -vv
+          coverage run -m --source=actions pytest tests -v
           coverage report --fail-under=100
