@@ -2,9 +2,9 @@ name: lint
 on:
   push:
   workflow_run:
-      workflows: ["tests"]
-      types:
-        - completed
+    workflows: ["tests"]
+    types:
+      - completed
 jobs:
   lint:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}

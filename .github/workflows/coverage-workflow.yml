@@ -2,9 +2,9 @@ name: code-cov
 on:
   push:
   workflow_run:
-      workflows: ["tests"]
-      types:
-        - completed
+    workflows: ["tests"]
+    types:
+      - completed
 jobs:
   code-coverage:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
