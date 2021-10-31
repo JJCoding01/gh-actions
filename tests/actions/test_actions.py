@@ -32,5 +32,10 @@ def test_power(a, b, ans):
 def test_div():
     assert div(10, 2) == 5
 
+
 def test_mul():
-    assert mul(3,5)==15
+    assert mul(3, 5) == 15
+
+
+def test_fail():
+    pytest.fail()
