@@ -1,12 +1,8 @@
 name: lint
-on: [push, pull_request]
-  workflow_run:
-    workflows: ["tests"]
-    types:
-      - completed
+on: [push]
+
 jobs:
   lint:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
