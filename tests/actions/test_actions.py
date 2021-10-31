@@ -35,3 +35,7 @@ def test_div():
 
 def test_mul():
     assert mul(3, 5) == 15
+
+
+def test_fail():
+    pytest.fail()
